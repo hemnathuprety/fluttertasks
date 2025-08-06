@@ -5,12 +5,12 @@ import 'package:fluttertasks/shared/use_cases/usecase.dart';
 import 'package:injectable/injectable.dart';
 
 @lazySingleton
-class DeleteTodoUsecase implements UseCase<bool?, Map<String, dynamic>> {
+class DeleteTodoUsecase implements UseCase<bool?, int> {
   final TodoRepo todoRepo;
 
   DeleteTodoUsecase({required this.todoRepo});
 
   @override
-  Future<Either<Failure, bool?>> call(Map<String, dynamic> param) async =>
+  Future<Either<Failure, bool?>> call(int param) async =>
       await todoRepo.deleteTodo(param);
 }

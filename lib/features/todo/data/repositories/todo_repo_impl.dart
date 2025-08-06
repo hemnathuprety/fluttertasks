@@ -30,7 +30,7 @@ class TodoRepoImpl extends TodoRepo {
   }
 
   @override
-  Future<Either<Failure, bool?>> deleteTodo(Map<String, dynamic> params) async {
+  Future<Either<Failure, bool?>> deleteTodo(int params) async {
     try {
       final result = await todoDataSource.deleteTodo(params);
 

@@ -8,7 +8,7 @@ part of 'todo_data_model.dart';
 
 _TodoDataModel _$TodoDataModelFromJson(Map<String, dynamic> json) =>
     _TodoDataModel(
-      id: (json['id'] as num?)?.toInt() ?? 0,
+      id: (json['_id'] as num?)?.toInt(),
       title: json['title'] as String? ?? '',
       description: json['description'] as String? ?? '',
       dueDate: json['dueDate'] as String? ?? '',
@@ -16,7 +16,7 @@ _TodoDataModel _$TodoDataModelFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$TodoDataModelToJson(_TodoDataModel instance) =>
     <String, dynamic>{
-      'id': instance.id,
+      '_id': instance.id,
       'title': instance.title,
       'description': instance.description,
       'dueDate': instance.dueDate,

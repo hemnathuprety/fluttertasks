@@ -8,6 +8,6 @@ abstract class TodoRepo {
   Future<Either<Failure, List<TodoDataModel>>> getTodoList(String params);
 
   Future<Either<Failure, bool?>> deleteTodo(
-    Map<String, dynamic> params,
+    int params,
   );
 }

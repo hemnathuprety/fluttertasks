@@ -9,7 +9,7 @@ abstract class TodoDataSource {
 
   Future<List<TodoDataModel>> getTodoList(String params);
 
-  Future<bool> deleteTodo(Map<String, dynamic> params);
+  Future<bool> deleteTodo(int params);
 }
 
 @LazySingleton(as: TodoDataSource)
@@ -28,9 +28,9 @@ class TodoDataSourceImpl implements TodoDataSource {
   }
 
   @override
-  Future<bool> deleteTodo(Map<String, dynamic> params) async {
+  Future<bool> deleteTodo(int params) async {
     try {
-      int id = params["id"];
+      int id = params;
       await todoHelper.delete(id);
       return true;
     } catch (e) {
