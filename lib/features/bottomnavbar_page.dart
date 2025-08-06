@@ -26,6 +26,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
   Widget build(BuildContext context) {
     return AutoTabsRouter(
       routes: [
+        HomeRoute(),
         TodoRoute(),
         DynamicFormRoute(),
         EcommerceRoute(),
@@ -47,10 +48,11 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  _buildBottomNavigationItem("To-Do", Icons.add_task, 0),
-                  _buildBottomNavigationItem("Dynamic Form",Icons.dynamic_feed, 1), // Space for FloatingActionButton
-                  _buildBottomNavigationItem("Mini E-Commerce",Icons.sell, 2),
-                  _buildBottomNavigationItem("Method Channel",Icons.wifi_channel, 3),
+                  _buildBottomNavigationItem("Home", Icons.home, 0),
+                  _buildBottomNavigationItem("To-Do", Icons.add_task, 1),
+                  _buildBottomNavigationItem("Dynamic Form",Icons.dynamic_feed, 2), // Space for FloatingActionButton
+                  _buildBottomNavigationItem("Mini E-Commerce",Icons.sell, 3),
+                  _buildBottomNavigationItem("Method Channel",Icons.wifi_channel, 4),
                 ],
               ),
             ),

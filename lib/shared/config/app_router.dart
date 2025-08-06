@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:fluttertasks/features/bottomnavbar_page.dart';
 import 'package:fluttertasks/features/dynamic_form/presentation/screen/dynamic_form.dart';
 import 'package:fluttertasks/features/ecommerce/presentation/screen/ecommerce.dart';
+import 'package:fluttertasks/features/home_page.dart';
 import 'package:fluttertasks/features/method_channel/presentation/screen/method_channel.dart';
 import 'package:fluttertasks/features/todo/presentation/screen/todo_page.dart';
 
@@ -16,7 +17,8 @@ class AppRouter extends RootStackRouter {
       page: BottomNavBarRoute.page,
       initial: false,
       children: [
-        AutoRoute(path: 'TodoRoute', page: TodoRoute.page, initial: true),
+        AutoRoute(path: 'Home', page: HomeRoute.page, initial: true),
+        AutoRoute(path: 'TodoRoute', page: TodoRoute.page),
         AutoRoute(path: 'DynamicFormRoute', page: DynamicFormRoute.page),
         AutoRoute(path: 'EcommerceRoute', page: EcommerceRoute.page),
         AutoRoute(path: 'MethodChannelRoute', page: MethodChannelRoute.page),

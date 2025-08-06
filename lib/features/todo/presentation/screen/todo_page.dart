@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertasks/features/todo/data/models/todo_data_model.dart';
 import 'package:fluttertasks/features/todo/presentation/bloc/todo_bloc.dart';
 import 'package:fluttertasks/features/todo/presentation/screen/add_edit_todo_screen.dart';
-import 'package:fluttertasks/shared/di/injection_container.dart';
 
 @RoutePage()
 class TodoPage extends StatefulWidget {
@@ -17,12 +16,12 @@ class TodoPage extends StatefulWidget {
 }
 
 class _TodoPageState extends State<TodoPage> {
-
   @override
   void initState() {
     super.initState();
     context.read<TodoBloc>().add(TodoEvent.getTodoList());
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
